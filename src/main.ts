@@ -52,11 +52,11 @@ window.addEventListener("keyup", function (e) {
   }
 
   if (!running && e.code === "Enter") {
-    render(true);
+    render();
   }
 });
 
-function render(forced = false) {
+function render() {
   if (!running || frame % F === 0) {
     update();
     draw();
